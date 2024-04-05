@@ -496,7 +496,7 @@
   <!--/ Property End /-->
 
   <!--/ Agents Star /-->
-  <section class="section-agents section-t8">
+  <!-- <section class="section-agents section-t8">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -692,7 +692,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <div>
+    <h1>Testing</h1>
+  </div>
   <!--/ Agents End /-->
 
   <!--/ News Star /-->
