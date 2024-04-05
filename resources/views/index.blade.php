@@ -499,20 +499,30 @@
   <section class="section-agents section-t8" id="about">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">About Us</h2>
-            </div>
-            <div class="title-link">
-              <a href="{{url('about')}}">View more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
+        <div class="container-fluid" style="background-image: url(img/slide-about-1.jpg); height:300px; background-size: cover;">
+          <div class="overlay overlay-a"></div>
+          <div class="intro-content display-table">
+            <div class="table-cell">
+              <div class="container">
+                <div class="row">
+                  <div class= "col-lg-2"></div>
+                  <div class="col-lg-8">
+                    <div class="justify-content-center intro-body">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center text-uppercase">
+                                <li class="breadcrumb-item"><a href="#">About Us</a></li>
+                            </ol>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class= "col-lg-2"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-3">
         <div class="align-self-center">
           <p>
             We are a forward-thinking real estate firm equipped with
