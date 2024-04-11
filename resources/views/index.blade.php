@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>EstateAgency Bootstrap Template</title>
+  <title>Kingsbury Global Investment Limited</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -141,10 +141,10 @@
         <span></span>
       </button>
       <a class="navbar-brand text-brand" href="">Kingsbury<span class="color-b" style="color: #202F4B;">Global</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+      <!-- <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+      </button> -->
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -157,7 +157,7 @@
             <a class="nav-link" href="#footer">Contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Become an Agent</a>
+            <a class="nav-link" href="{{url('agent')}}">Become an Agent</a>
           </li>
          
         </ul>
@@ -359,7 +359,7 @@
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">Ikorodu Land
+                    <a href="property-single.html">Lekki-Ajah Land
                       <!-- <br /> Olive Road Two</a> -->
                   </h2>
                 </div>
@@ -374,9 +374,9 @@
                 <div class="card-footer-a">
                   <ul class="card-info d-flex justify-content-around">
                     <li>
-                      <h4 class="card-info-title">Ikorodu Mega Court</h4>
+                      <h4 class="card-info-title">Lekki-Ajah Mega Court</h4>
                       <span>
-                        Our Fast-selling Ikorodu Land <br> with Agreement and C of O.
+                        Our Fast-selling Lekki-Ajah Land <br> with Agreement and C of O.
                       </span>
                     </li>
                   </ul>
@@ -905,7 +905,7 @@ We actively cultivate strategic partnerships with industry-leading professionals
                   <span class="color-text-a" style="color:#F4C203"> Address.</span> No5, Opeloyeru street Ketu Lagos.
                 </li>
                 <li class="color-a">
-                  <span class="color-text-a" style="color:#F4C203">Email .</span> kingsbury.globalltd@gmail.com</li>
+                  <span class="color-text-a" style="color:#F4C203">Email .</span> info@kingsburyglobal.com</li>
                 <li class="color-a">
                   <span class="color-text-a" style="color:#F4C203">Phone .</span>07048000779</li>
               </ul>
@@ -1001,7 +1001,7 @@ We actively cultivate strategic partnerships with industry-leading professionals
           <div class="socials-a">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="https://facebook.com/kingsbury">
+                <a target="_blank" href="https://facebook.com/kingsbury">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
@@ -1011,12 +1011,12 @@ We actively cultivate strategic partnerships with industry-leading professionals
                 </a>
               </li> -->
               <li class="list-inline-item">
-                <a href="https://instagram.com/kingsbury">
+                <a target="_blank" href="https://www.instagram.com/kingsburyglobal">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://linkedin.com/kingsbury">
+                <a target="_blank" href="https://www.linkedin.com/in/kingsbury-global-investment-limited-064b302b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                   <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
               </li>

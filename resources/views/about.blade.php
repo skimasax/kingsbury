@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>EstateAgency Bootstrap Template</title>
+  <title>Kingsbury Global Investment Limited</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -38,7 +38,7 @@
 
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
-  <div class="box-collapse">
+  <!-- <div class="box-collapse">
     <div class="title-box-d">
       <h3 class="title-d">Search Property</h3>
     </div>
@@ -127,7 +127,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> -->
   <!--/ Form Search End /-->
 
   <!--/ Nav Star /-->
@@ -139,46 +139,32 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">Estate<span class="color-b">Agency</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+      <a class="navbar-brand text-brand" href="https://kingburyglobal.com">Kingsbury<span class="color-b">Global</span></a>
+      <!-- <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+      </button> -->
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
+      <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/')}}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="about.html">About</a>
+            <a class="nav-link active" href="https://kingsburyglobal.com">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="property-grid.html">Property</a>
+            <a class="nav-link"  href="https://kingsburyglobal.com">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="blog-grid.html">Blog</a>
+            <a class="nav-link"  href="https://kingsburyglobal.com">Contact us</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Pages
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="property-single.html">Property Single</a>
-              <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-              <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
-              <a class="dropdown-item" href="agent-single.html">Agent Single</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="{{url('about')}}">Become an Agent</a>
+          </li> -->
+         
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+      <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+      </button> -->
     </div>
   </nav>
   <!--/ Nav End /-->
@@ -189,17 +175,17 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">We Do Great Design For Creative Folks</h1>
+            <h1 class="title-single">Become an Agent with Kingsbury Global Investment Limited</h1>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Home</a>
+                <a href="https://kingsburyglobal.com">Home</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                About
+                Become an agent
               </li>
             </ol>
           </nav>
@@ -218,42 +204,61 @@
             <img src="img/slide-about-1.jpg" alt="" class="img-fluid">
           </div>
           <div class="sinse-box">
-            <h3 class="sinse-title">EstateAgency
+            <h3 class="sinse-title">Partners Information
               <span></span>
-              <br> Sinse 2017</h3>
-            <p>Art & Creative</p>
+              <!-- <br> Sinse 2017</h3>
+            <p>Art & Creative</p> -->
           </div>
         </div>
         <div class="col-md-12 section-t8">
           <div class="row">
-            <div class="col-md-6 col-lg-5">
-              <img src="img/about-2.jpg" alt="" class="img-fluid">
-            </div>
-            <div class="col-lg-2  d-none d-lg-block">
-              <div class="title-vertical d-flex justify-content-start">
-                <span>EstateAgency Exclusive Property</span>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5 section-md-t3">
-              <div class="title-box-d">
-                <h3 class="title-d">Sed
-                  <span class="color-d">porttitor</span> lectus
-                  <br> nibh.</h3>
-              </div>
-              <p class="color-text-a">
-                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget
-                consectetur sed, convallis
-                at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+            <div class="col-md-12">
+              {!! session('msg') !!}
+              <h3>Kindly complete the below!</h3>
+            <form action="{{ route('submit-agent-form') }}" method="post">
+              @csrf
+              <p>
+                <label for="name">Name:</label>
+                <input type="text" name="full_name" id="name" class="form-control" placeholder="Please enter your full-name" required>
               </p>
-              <p class="color-text-a">
-                Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-                Mauris blandit aliquet
-                elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed,
-                convallis at tellus.
+              <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="please enter your email" required>
               </p>
+              <p>
+                <label for="address">Residential Address:</label>
+                <input type="text" name="address" id="address" class="form-control" placeholder="please enter your house address" required>
+              </p>
+              <p>
+                <label for="phone">Phone Number:</label>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="please enter your phone number" required>
+              </p>
+              <p>
+                <label>Sex:</label>
+                <select class="form-control" name="sex" required>
+                    <option value="">Kindly select your sex</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+              </p>
+              <p>
+                <label>State:</label>
+                <select class="form-control" name="state" required>
+                    <option value="">Kindly select your state</option>
+                    <option value="lagos">Lagos</option>
+                    <option value="abuja">Abuja</option>
+                    <option value="ogun">Ogun</option>
+                    <option value="oyo">Oyo</option>
+                    <option value="osun">Osun</option>
+                    <option value="ondo">Ondo</option>
+                    <option value="ekiti">Ekiti</option>
+                </select>
+              </p>
+
+              <button type="submit" class="btn btn-success form-control">Register</button>
+            </form>
             </div>
+            
           </div>
         </div>
       </div>
@@ -262,7 +267,7 @@
   <!--/ About End /-->
 
   <!--/ Team Star /-->
-  <section class="section-agents section-t8">
+  <!-- <section class="section-agents section-t8">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -453,36 +458,38 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--/ Team End /-->
 
   <!--/ footer Star /-->
-  <section class="section-footer">
+  <section class="section-footer" id="footer">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-4">
           <div class="widget-a">
             <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
+              <h3 class="w-title-a text-brand" style="color:#202F4B">Kingsbury Global Investment Limited</h3>
             </div>
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
-                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                sed aute irure.
+                <i style="color: #202F4B;">Where desires meet reality....Contact us<i/>
               </p>
             </div>
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com</li>
+                  <span class="color-text-a" style="color:#F4C203"> Address.</span> No5, Opeloyeru street Ketu Lagos.
+                </li>
                 <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234</li>
+                  <span class="color-text-a" style="color:#F4C203">Email .</span> info@kingsburyglobal.com</li>
+                <li class="color-a">
+                  <span class="color-text-a" style="color:#F4C203">Phone .</span>07048000779</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
+          <!-- <div class="widget-a">
             <div class="w-header-a">
               <h3 class="w-title-a text-brand">The Company</h3>
             </div>
@@ -510,10 +517,10 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
+          <!-- <div class="widget-a">
             <div class="w-header-a">
               <h3 class="w-title-a text-brand">International sites</h3>
             </div>
@@ -539,7 +546,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -554,52 +561,52 @@
                 <a href="#">Home</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="#about">About</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="#property">Property</a>
               </li>
-              <li class="list-inline-item">
+              <!-- <li class="list-inline-item">
                 <a href="#">Blog</a>
-              </li>
+              </li> -->
               <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="#footer">Contact</a>
               </li>
             </ul>
           </nav>
           <div class="socials-a">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">
+                <a target="_blank" href="https://facebook.com/kingsbury">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
-              <li class="list-inline-item">
+              <!-- <li class="list-inline-item">
                 <a href="#">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
-              </li>
+              </li> -->
               <li class="list-inline-item">
-                <a href="#">
+                <a target="_blank" href="https://www.instagram.com/kingsburyglobal">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                <a target="_blank" href="https://www.linkedin.com/in/kingsbury-global-investment-limited-064b302b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
               </li>
-              <li class="list-inline-item">
+              <!-- <li class="list-inline-item">
                 <a href="#">
                   <i class="fa fa-dribbble" aria-hidden="true"></i>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="copyright-footer">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">EstateAgency</span> All Rights Reserved.
+              <span class="color-a">Kingbury Global Limited</span> All Rights Reserved.
             </p>
           </div>
           <div class="credits">
@@ -609,7 +616,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
             -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
           </div>
         </div>
       </div>
