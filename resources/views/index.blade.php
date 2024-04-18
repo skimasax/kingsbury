@@ -157,7 +157,7 @@
             <a class="nav-link" href="#footer">Contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('agent')}}">Become an Agent</a>
+            <a class="nav-link" href="{{url('agent')}}">Become a partner</a>
           </li>
          
         </ul>

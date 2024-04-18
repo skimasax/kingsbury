@@ -139,7 +139,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="https://kingburyglobal.com">Kingsbury<span class="color-b">Global</span></a>
+      <a class="navbar-brand text-brand" href="https://kingsburyglobal.com">Kingsbury<span class="color-b">Global</span></a>
       <!-- <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
@@ -175,7 +175,7 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">Become an Agent with Kingsbury Global Investment Limited</h1>
+            <h1 class="title-single">Become a partner with Kingsbury Global Investment Limited</h1>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -218,16 +218,16 @@
             <form action="{{ route('submit-agent-form') }}" method="post">
               @csrf
               <p>
-                <label for="name">Name:</label>
-                <input type="text" name="full_name" id="name" class="form-control" placeholder="Please enter your full-name" required>
+                <label for="name">Company Name:</label>
+                <input type="text" name="company_name" id="name" class="form-control" placeholder="Please enter your company name" required>
               </p>
               <p>
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="please enter your email" required>
               </p>
               <p>
-                <label for="address">Residential Address:</label>
-                <input type="text" name="address" id="address" class="form-control" placeholder="please enter your house address" required>
+                <label for="address">Company Address:</label>
+                <input type="text" name="company_address" id="address" class="form-control" placeholder="please enter your company address" required>
               </p>
               <p>
                 <label for="phone">Phone Number:</label>
@@ -253,6 +253,21 @@
                     <option value="ondo">Ondo</option>
                     <option value="ekiti">Ekiti</option>
                 </select>
+              </p>
+              <p>
+                <label>How did you hear about us?</label>
+                <br>
+                <input type="radio" name="hear_about_us" value="instagram"> Instagram
+                <br>
+                <input type="radio" name="hear_about_us" value="facebook"> Facebook
+                <br>
+                <input type="radio" name="hear_about_us" value="twitter"> Twitter
+                <br>
+                <input type="radio" name="hear_about_us" value="linkedin"> Linkedin
+                <br>
+                <input type="radio" name="hear_about_us" value="other_agents"> Other Agents
+                <br>
+                <input type="radio" name="hear_about_us" value="sales_person"> Sales Person
               </p>
 
               <button type="submit" class="btn btn-success form-control">Register</button>

@@ -13,17 +13,18 @@ class AgentController extends Controller
     public function store(Request $request)
     {
 
-        $name = $request['full_name'];
+        $name = $request['company_name'];
         $email = $request['email'];
-        $address = $request['address'];
+        $address = $request['company_address'];
         $phone = $request['phone'];
         $state = $request['state'];
         $sex = $request['sex'];
+        $hearAboutUs = $request['hear_about_us'];
 
         //send email
-        $adminEmail = 'kingburyglobal@gmail.com';
+        $adminEmail = 'kingsbury.globalltd@gmail.com';
         Notification::route('mail', $adminEmail)
-        ->notify(new KingsburyAgentRegistrationNotification($name,$email,$address,$phone,$sex,$state));
+        ->notify(new KingsburyAgentRegistrationNotification($name,$email,$address,$phone,$sex,$state,$hearAboutUs));
 
         return back()->with("msg", "<div class='alert alert-success'>Registration submitted successfully..we will get back to you in 24-48hrs</div>");
 

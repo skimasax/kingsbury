@@ -56,7 +56,7 @@
                 <header style="padding: 15px; width: 100%">
                   <img
                     style="width: 7rem"
-                    src="https://res.cloudinary.com/daqnlwgkp/image/upload/v1693861142/afrimalllogo_hahati.png"
+                    src="https://res.cloudinary.com/daqnlwgkp/image/upload/v1713427342/IMG_20240307_124643_774_l8g3pg.jpg"
                     alt="logo_prlrdy"
                   />
                 </header>
@@ -156,6 +156,16 @@
                         "
                       >
                       State: {{ $state }}
+                      </p>
+                      <p
+                        style="
+                          font-weight: 400;
+                          font-size: 14px;
+                          line-height: 21px;
+                          color: rgba(33, 33, 33, 0.7);
+                        "
+                      >
+                      How did you hear about us: {{ $hear_about_us }}
                       </p>
 
                       <!-- <p>

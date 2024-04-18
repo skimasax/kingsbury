@@ -17,12 +17,13 @@ class KingsburyAgentRegistrationNotification extends Notification
     public $phone;
     public $sex;
     public $state;
+    public $hearAboutUs;
 
 
     /**
      * Create a new notification instance.
      */
-    public function __construct($name,$email, $address,$phone, $sex,$state)
+    public function __construct($name,$email, $address,$phone, $sex,$state,$hearAboutUs)
     {
         $this->name = $name;
         $this->email =$email;
@@ -30,6 +31,7 @@ class KingsburyAgentRegistrationNotification extends Notification
         $this->phone = $phone;
         $this->sex = $sex;
         $this->state = $state;
+        $this->hearAboutUs = $hearAboutUs;
     }
 
     /**
@@ -47,7 +49,7 @@ class KingsburyAgentRegistrationNotification extends Notification
      */
     public function toMail(object $notifiable): MailMessage
     {
-        return (new MailMessage)->view('email.agent', ['name' => $this->name,'email' => $this->email, 'address' => $this->address, 'phone' => $this->phone, 'sex' => $this->sex, 'state' => $this->state]);
+        return (new MailMessage)->view('email.agent', ['name' => $this->name,'email' => $this->email, 'address' => $this->address, 'phone' => $this->phone, 'sex' => $this->sex, 'state' => $this->state, 'hear_about_us' => $this->hearAboutUs]);
 
     }
 
