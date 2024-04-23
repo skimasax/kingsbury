@@ -218,16 +218,16 @@
             <form action="{{ route('submit-agent-form') }}" method="post">
               @csrf
               <p>
-                <label for="name">Company Name:</label>
-                <input type="text" name="company_name" id="name" class="form-control" placeholder="Please enter your company name" required>
+                <label for="name">Company Name or Full Name:</label>
+                <input type="text" name="company_name" id="name" class="form-control" placeholder="Please enter your name" required>
               </p>
               <p>
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="please enter your email" required>
               </p>
               <p>
-                <label for="address">Company Address:</label>
-                <input type="text" name="company_address" id="address" class="form-control" placeholder="please enter your company address" required>
+                <label for="address">Company Address or House Address:</label>
+                <input type="text" name="company_address" id="address" class="form-control" placeholder="please enter your  address" required>
               </p>
               <p>
                 <label for="phone">Phone Number:</label>

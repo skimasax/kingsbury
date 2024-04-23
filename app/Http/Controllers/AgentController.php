@@ -22,7 +22,7 @@ class AgentController extends Controller
         $hearAboutUs = $request['hear_about_us'];
 
         //send email
-        $adminEmail = 'kingsbury.globalltd@gmail.com';
+        $adminEmail = 'info@kingsburyglobal.com';
         Notification::route('mail', $adminEmail)
         ->notify(new KingsburyAgentRegistrationNotification($name,$email,$address,$phone,$sex,$state,$hearAboutUs));
 

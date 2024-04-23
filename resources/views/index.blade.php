@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Kingsbury Global Investment Limited</title>
@@ -14,14 +15,17 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
   <!-- Bootstrap CSS File -->
   <link href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
   <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-<link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
-<link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
-<link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
 
   <!-- Main Stylesheet File -->
@@ -33,118 +37,316 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+  <style>
+    /* Position the icon at the bottom left */
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      /* Make sure it's above other content */
+    }
+
+    /* For mobile devices */
+    @media only screen and (max-width: 767px) {
+      .navbar-brand {
+        font-size: 20px;
+        /* Adjust font size as needed */
+      }
+
+      .navbar-collapse {
+        background-color: #fff;
+        /* Adjust background color as needed */
+        border-top: 1px solid #e5e5e5;
+        /* Add border for separation */
+      }
+
+      .navbar-nav .nav-item {
+        margin-bottom: 10px;
+        /* Add margin between nav items */
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 16px;
+        /* Adjust font size as needed */
+      }
+
+      .navbar-toggler {
+        border-color: #fff;
+        /* Adjust border color as needed */
+      }
+
+      .intro-item {
+        height: 250px;
+        /* Adjust height as needed */
+        background-size: cover;
+      }
+
+      .intro-title {
+        font-size: 24px;
+        /* Adjust font size as needed */
+        line-height: 1.3;
+        /* Adjust line height as needed */
+        margin-top: 40px;
+        /* Add space between title and top */
+      }
+
+      .intro-title span.color-b {
+        display: block;
+        /* Display each color span on a new line */
+      }
+
+      .intro-title span {
+        display: block;
+      }
+
+      .intro-content {
+        padding-top: 50px;
+        /* Add padding to intro content */
+      }
+
+      .card-box-c {
+        margin-bottom: 30px;
+      }
+
+      .title-c {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .content-c {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .title-a {
+        font-size: 24px;
+        /* Adjust font size as needed */
+      }
+
+      .card-title-a {
+        font-size: 18px;
+        /* Adjust font size as needed */
+        margin-bottom: 5px;
+        /* Add margin below the title */
+      }
+
+      .price-a {
+        font-size: 14px;
+        /* Adjust font size as needed */
+      }
+
+      .card-info-title {
+        font-size: 14px;
+        /* Adjust font size as needed */
+      }
+
+      .card-info span {
+        font-size: 12px;
+        /* Adjust font size as needed */
+      }
+
+      .intro-content {
+        height: 300px;
+        /* Adjust height as needed for mobile */
+      }
+
+      .container-fluid {
+        padding: 0;
+        /* Remove padding for full width */
+      }
+
+      .intro-body {
+        text-align: center;
+        /* Center align content on mobile */
+      }
+
+      #ourServicesImage {
+        display: none;
+      }
+
+    }
+
+    .card {
+      border: none;
+      transition: all 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        margin-bottom: 30px;
+      }
+    }
+
+    .intro-banner {
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .intro-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .about-content {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .bg-image{
+        height:100px
+      }
+      .intro-banner {
+        height: 200px;
+      }
+
+      .about-content {
+        font-size: 16px;
+      }
+    }
+
+    .section-footer {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+
+    .widget-a {
+      margin-bottom: 30px;
+    }
+
+    .w-header-a h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #202f4b;
+      margin-bottom: 15px;
+    }
+
+    .w-text-a {
+      font-style: italic;
+      color: #202f4b;
+    }
+
+    .w-footer-a ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .w-footer-a li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .color-text-a {
+      color: #f4c203;
+    }
+
+    @media (max-width: 768px) {
+      .w-header-a h3 {
+        font-size: 20px;
+      }
+
+      .w-footer-a li {
+        font-size: 14px;
+      }
+    }
+    .section-footer {
+  background-color: #202f4b;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.nav-footer {
+  margin-bottom: 20px;
+}
+
+.nav-footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav-footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-footer a:hover {
+  color: #f4c203;
+}
+
+.socials-a ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.socials-a i {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.socials-a i:hover {
+  color: #f4c203;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.color-a {
+  color: #f4c203;
+}
+
+  </style>
+
 </head>
 
 <body>
 
   <div class="click-closed"></div>
-  <!--/ Form Search Star /-->
-  <!-- <div class="box-collapse">
-    <div class="title-box-d">
-      <h3 class="title-d">Search Property</h3>
-    </div>
-    <span class="close-box-collapse right-boxed ion-ios-close"></span>
-    <div class="box-collapse-wrap form">
-      <form class="form-a">
-        <div class="row">
-          <div class="col-md-12 mb-2">
-            <div class="form-group">
-              <label for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="Type">Type</label>
-              <select class="form-control form-control-lg form-control-a" id="Type">
-                <option>All Type</option>
-                <option>For Rent</option>
-                <option>For Sale</option>
-                <option>Open House</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="city">City</label>
-              <select class="form-control form-control-lg form-control-a" id="city">
-                <option>All City</option>
-                <option>Alabama</option>
-                <option>Arizona</option>
-                <option>California</option>
-                <option>Colorado</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="bedrooms">Bedrooms</label>
-              <select class="form-control form-control-lg form-control-a" id="bedrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="garages">Garages</label>
-              <select class="form-control form-control-lg form-control-a" id="garages">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="bathrooms">Bathrooms</label>
-              <select class="form-control form-control-lg form-control-a" id="bathrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="price">Min Price</label>
-              <select class="form-control form-control-lg form-control-a" id="price">
-                <option>Unlimite</option>
-                <option>$50,000</option>
-                <option>$100,000</option>
-                <option>$150,000</option>
-                <option>$200,000</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Search Property</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div> -->
-  <!--/ Form Search End /-->
+
 
   <!--/ Nav Star /-->
+
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <a class="navbar-brand text-brand" href="">Kingsbury<span class="color-b" style="color: #202F4B;">Global</span></a>
-      <!-- <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button> -->
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -159,11 +361,11 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url('agent')}}">Become a partner</a>
           </li>
-         
         </ul>
       </div>
     </div>
   </nav>
+
   <!--/ Nav End /-->
 
   <!--/ Carousel Star /-->
@@ -204,7 +406,7 @@
                   <div class="intro-body">
                     <!-- <p class="intro-title-top">Doral, Florida
                       <br> 78345</p> -->
-                      <h1 class="intro-title mb-4">
+                    <h1 class="intro-title mb-4">
                       <span class="color-b" style="color: white;">WELCOME </span> To
                       <br><span style="color: #F4C203;">Kingsbury Global Investment</span>
                       <br>Limited
@@ -229,7 +431,7 @@
                   <div class="intro-body">
                     <!-- <p class="intro-title-top">Doral, Florida
                       <br> 78345</p> -->
-                      <h1 class="intro-title mb-4">
+                    <h1 class="intro-title mb-4">
                       <span class="color-b" style="color: white;">WELCOME </span> To
                       <br><span style="color: #F4C203;">Kingsbury Global Investment</span>
                       <br>Limited
@@ -272,8 +474,8 @@
               </div>
             </div>
             <div class="card-body-c">
-              <p class="content-c">
-              Our mission is to emerge as the leading real estate company in Africa and beyond, dedicated to surpassing the expectations of our valued customers through collaborative teamwork and unwavering dedication.
+              <p class="content-c" style="color:#202f4b">
+                Our mission is to emerge as the leading real estate company in Africa and beyond, dedicated to surpassing the expectations of our valued customers through collaborative teamwork and unwavering dedication.
               </p>
             </div>
             <!-- <div class="card-footer-c">
@@ -294,8 +496,8 @@
               </div>
             </div>
             <div class="card-body-c">
-              <p class="content-c">
-              Our vision is to solidify our position as a household name renowned for our commitment to meeting the diverse real estate needs of our esteemed clientele and partners.
+              <p class="content-c" style="color:#202f4b">
+                Our vision is to solidify our position as a household name renowned for our commitment to meeting the diverse real estate needs of our esteemed clientele and partners.
               </p>
             </div>
             <div class="card-footer-c">
@@ -316,8 +518,8 @@
               </div>
             </div>
             <div class="card-body-c">
-              <p class="content-c">
-              Integrity and accountability are the cornerstone of our business ethos, guiding every aspect of our operations and interactions.
+              <p class="content-c" style="color:#202f4b">
+                Integrity and accountability are the cornerstone of our business ethos, guiding every aspect of our operations and interactions.
               </p>
             </div>
             <!-- <div class="card-footer-c">
@@ -330,6 +532,8 @@
       </div>
     </div>
   </section>
+
+
   <!--/ Services End /-->
 
   <!--/ Property Star /-->
@@ -391,7 +595,7 @@
               <img src="img/property-3.jpg" alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
-            <div class="card-overlay-a-content">
+              <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
                     <a href="property-single.html">Abuja Land
@@ -426,7 +630,7 @@
               <img src="img/property-7.jpg" alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
-            <div class="card-overlay-a-content">
+              <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
                     <a href="property-single.html">Epe Land
@@ -461,7 +665,7 @@
               <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
-            <div class="card-overlay-a-content">
+              <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
                     <a href="property-single.html">Ibadan Land
@@ -498,7 +702,7 @@
   <!--Our Services -->
   <section class="section-agents section-t8" id="about">
     <div class="container">
-    <div class="row">
+      <div class="row">
         <div class="col-md-12">
           <div class="title-wrap d-flex justify-content-between">
             <div class="title-box">
@@ -512,475 +716,153 @@
           </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="container-fluid img-fluid" style="background-image: url(images/kingsbury2.jpeg); height:600px; background-size: cover;">
+        <div class="container-fluid img-fluid" style="background-image: url(images/kingsbury2.jpeg);" id="ourServicesImage">
           <div class="overlay overlay-a"></div>
-          <div class="intro-content display-table">
+          <div class="intro-content display-table" style="height:600px;">
             <div class="table-cell">
               <div class="container">
                 <div class="row">
-                  <div class= "col-lg-2"></div>
+                  <div class="col-lg-2"></div>
                   <div class="col-lg-8">
                     <div class="justify-content-center intro-body">
-                        <nav aria-label="breadcrumb">
-                            <!-- <ol class="breadcrumb justify-content-center text-uppercase">
-                                <li class="breadcrumb-item"><a href="#">About Us</a></li>
-                            </ol> -->
-                        </nav>
-                     </div>
+                      <nav aria-label="breadcrumb">
+                        <!-- <ol class="breadcrumb justify-content-center text-uppercase">
+                    <li class="breadcrumb-item"><a href="#">About Us</a></li>
+                  </ol> -->
+                      </nav>
+                    </div>
                   </div>
-                  <div class= "col-lg-2"></div>
+                  <div class="col-lg-2"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex mt-3">
-              <!-- <div class="card-box-ico">
-                <span class="fa fa-gamepad"></span>
-              </div> -->
-              <div class="card-title-c align-self-center">
-                <h2 class="">Real Estate Brokerage</h2>
+
+      <div class="container mt-3" style="background-color: #F4C203;">
+        <div class="row pt-4">
+          <div class="col-lg-4 col-md-6 mb-4 p">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title" style="color:#202f4b"><b>Real Estate Brokerage</b></h2>
+                <p class="card-text" style="color:#202f4b">We provide comprehensive support to clients in their endeavors to purchase, sell, or lease residential properties, offering guidance and assistance throughout each phase of the transaction. Utilizing advanced digital marketing strategies and leveraging various social media platforms, we effectively showcase properties and engage with potential buyers, thereby maximizing exposure and facilitating successful property transactions.</p>
               </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-              We provide comprehensive support to clients in their endeavors to purchase, sell, or lease residential properties, offering guidance and assistance throughout each phase of the transaction.
-Utilizing advanced digital marketing strategies and
-leveraging various social media platforms, we effectively showcase properties and engage with potential buyers, thereby maximizing exposure and facilitating successful property transactions.
-              </p>
-            </div>
-            <!-- <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex mt-3">
-              <!-- <div class="card-box-ico">
-                <span class="fa fa-usd"></span>
-              </div> -->
-              <div class="card-title-c align-self-center">
-                <h2 class="">Real Estate Development</h2>
-              </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-              We specialize in the comprehensive development of mixed-use residential and commercial projects, managing the entire project life cycle from inception to fruition. Our oversight encompasses all acets of the development process, ensuring seamless execution and successful project delivery.
-Our approach begins with meticulous market research
-and feasibility studies, enabling us to identify promising
-development prospects while effectively mitigating
-associated risks. Collaboration lies at the heart of our
-operations, as we work closely with architects, engineers,
-contractors, and other stakeholders to align efforts and
-achieve project objectives within established timelines and budgetary constraints.
-              </p>
-            </div>
-            <div class="card-footer-c">
-              <!-- <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a> -->
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex mt-3">
-              <!-- <div class="card-box-ico">
-                <span class="fa fa-home"></span>
-              </div> -->
-              <div class="card-title-c align-self-center">
-                <h2 class="">Real Estate Investment</h2>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title" style="color:#202f4b"><b>Real Estate Development</b></h2>
+                <p class="card-text" style="color:#202f4b">We specialize in the comprehensive development of mixed-use residential and commercial projects, managing the entire project life cycle from inception to fruition. Our oversight encompasses all aspects of the development process, ensuring seamless execution and successful project delivery. Collaboration lies at the heart of our operations, as we work closely with architects, engineers, contractors, and other stakeholders to align efforts and achieve project objectives within established timelines and budgetary constraints.</p>
               </div>
             </div>
-            <div class="card-body-c">
-              <p class="content-c">
-              We specialize in formulating and implementing investment strategies tailored to acquire residential and commercial properties situated in burgeoning markets demonstrating significant growth potential.
-Our approach begins with meticulous market
-research and in-depth financial analysis, enabling
-us to identify undervalued properties poised for
-substantial appreciation. Additionally, we employ
-value-add strategies, including but not limited to
-renovations, rebranding initiatives, and optimization
-of property management practices, aimed at
-GLOBAL INVESTMENT LIMITED
-enhancing the value of acquired assets to their
-fullest potential. .
-We actively cultivate strategic partnerships with industry-leading professionals, reputable lenders, and proficient property management entities. Through these collaborative efforts, we streamline our investment processes, ensuring efficient execution and maximizing returns on investment.
-              </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title" style="color:#202f4b"><b>Real Estate Investment</b></h2>
+                <p class="card-text" style="color:#202f4b">We specialize in formulating and implementing investment strategies tailored to acquire residential and commercial properties situated in burgeoning markets demonstrating significant growth potential. Our approach begins with meticulous market research and in-depth financial analysis, enabling us to identify undervalued properties poised for substantial appreciation. Additionally, we employ value-add strategies, including but not limited to renovations, rebranding initiatives, and optimization of property management practices, aimed at enhancing the value of acquired assets to their fullest potential.</p>
+              </div>
             </div>
-            <!-- <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div> -->
           </div>
         </div>
       </div>
-     
+
+
+
     </div>
   </section>
-    <!--Our Services -->
+  <!--Our Services -->
 
   <!--/ About Us /-->
   <section class="section-agents section-t8" id="about">
     <div class="container">
-    <div class="row">
+      <div class="row">
         <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
+          <div class="title-wrap d-flex justify-content-center">
+            <div class="title-box text-center">
               <h2 class="title-a">About Us</h2>
-            </div>
-            <div class="title-link">
-              <!-- <a href="property-grid.html">All Property
-                <span class="ion-ios-arrow-forward"></span>
-              </a> -->
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="container-fluid" style="background-image: url(img/slide-about-1.jpg); height:300px; background-size: cover;">
+        <div class="col-12 intro-banner" style="background-image: url(img/slide-about-1.jpg);">
           <div class="overlay overlay-a"></div>
-          <div class="intro-content display-table">
-            <div class="table-cell">
-              <div class="container">
-                <div class="row">
-                  <div class= "col-lg-2"></div>
-                  <div class="col-lg-8">
-                    <div class="justify-content-center intro-body">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center text-uppercase">
-                                <li class="breadcrumb-item"><a href="#">About Us</a></li>
-                            </ol>
-                        </nav>
-                     </div>
-                  </div>
-                  <div class= "col-lg-2"></div>
+          <div class="intro-content text-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                      <li class="breadcrumb-item"><a href="#">About Us</a></li>
+                    </ol>
+                  </nav>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="align-self-center">
-          <p style="font-size:17px;">
-            We are a forward-thinking real estate firm equipped with
-            cutting-edge technology and innovative solutions to transform
-            your vision of the perfect home into reality. We firmly advocate
-            that investing in real estate transcends mere financial gain; it's
-            about investing in a contemporary, tech-driven lifestyle that
-            promises both satisfaction and substantial returns on investment.
-            Our expertise extends beyond the mere transactional aspect of
-            home sales. We are committed to guiding our clients towards
-            genuine wealth-building opportunities through strategic real
-            estate investments. At Kingsbury, we are dedicated to bridging the
-            gap between aspiration and actualization, ensuring that every
-            client's desires seamlessly manifest into tangible realities
-          </p>
-          <p style="font-size: 17px;">
-            Welcome to Kingsbury—where dreams are realized, and aspirations
-            materialize in the form of contemporary living spaces that redefine
-            the essence of modern luxury.
-
-          </p>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <div class="about-content text-center">
+            <p style="color:#202f4b">We are a forward-thinking real estate firm equipped with cutting-edge technology and innovative solutions to transform your vision of the perfect home into reality. We firmly advocate that investing in real estate transcends mere financial gain; it's about investing in a contemporary, tech-driven lifestyle that promises both satisfaction and substantial returns on investment.</p>
+            <p style="color:#202f4b">Our expertise extends beyond the mere transactional aspect of home sales. We are committed to guiding our clients towards genuine wealth-building opportunities through strategic real estate investments. At Kingsbury, we are dedicated to bridging the gap between aspiration and actualization, ensuring that every client's desires seamlessly manifest into tangible realities.</p>
+            <p style="color:#202f4b">Welcome to Kingsbury—where dreams are realized, and aspirations materialize in the form of contemporary living spaces that redefine the essence of modern luxury.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <!--/ About Us End /-->
 
-  <!--/ News Star /-->
-  <!-- <section class="section-news section-t8">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Latest News</h2>
-            </div>
-            <div class="title-link">
-              <a href="blog-grid.html">All News
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="new-carousel" class="owl-carousel owl-theme">
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-2.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">House</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="blog-single.html">House is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-5.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="blog-single.html">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-7.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">Park</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="blog-single.html">Park is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-3.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!--/ News End /-->
-
-  <!--/ Testimonials Star /-->
-  <!-- <section class="section-testimonials section-t8 nav-arrow-a">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Testimonials</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="testimonial-carousel" class="owl-carousel owl-arrow">
-        <div class="carousel-item-a">
-          <div class="testimonials-box">
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-img">
-                  <img src="img/testimonial-1.jpg" alt="" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-ico">
-                  <span class="ion-ios-quote"></span>
-                </div>
-                <div class="testimonials-content">
-                  <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
-                  </p>
-                </div>
-                <div class="testimonial-author-box">
-                  <img src="img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Albert & Erika</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-a">
-          <div class="testimonials-box">
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-img">
-                  <img src="img/testimonial-2.jpg" alt="" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-ico">
-                  <span class="ion-ios-quote"></span>
-                </div>
-                <div class="testimonials-content">
-                  <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
-                  </p>
-                </div>
-                <div class="testimonial-author-box">
-                  <img src="img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Pablo & Emma</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!--/ Testimonials End /-->
 
   <!--/ footer Star /-->
   <section class="section-footer" id="footer">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="widget-a">
             <div class="w-header-a">
-              <h3 class="w-title-a text-brand" style="color:#202F4B">Kingsbury Global Investment Limited</h3>
+              <h3 class="w-title-a text-brand">Kingsbury Global Investment Limited</h3>
             </div>
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
-                <i style="color: #202F4B;">Where desires meet reality....Contact us<i/>
+                <i class="text-brand text-white">Where desires meet reality... Contact us</i>
               </p>
             </div>
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a" style="color:#F4C203"> Address.</span> No5, Opeloyeru street Ketu Lagos.
+                  <span class="color-text-a">Address:</span> <span class="text-white">No5, Opeloyeru street Ketu Lagos.</span>
                 </li>
                 <li class="color-a">
-                  <span class="color-text-a" style="color:#F4C203">Email .</span> info@kingsburyglobal.com</li>
+                  <span class="color-text-a">Email:</span> <span class="text-white">info@kingsburyglobal.com</span>
+                </li>
                 <li class="color-a">
-                  <span class="color-text-a" style="color:#F4C203">Phone .</span>07048000779</li>
+                  <span class="color-text-a">Phone:</span> <span class="text-white">07048000779</span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <!-- <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <!-- <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
-                </li>
-              </ul>
-            </div>
-          </div> -->
-        </div>
       </div>
     </div>
   </section>
-  <footer>
+
+  <footer class="section-footer">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <nav class="nav-footer">
-            <ul class="list-inline">
+            <ul class="list-inline text-center text-md-left">
               <li class="list-inline-item">
                 <a href="#">Home</a>
               </li>
@@ -990,26 +872,18 @@ We actively cultivate strategic partnerships with industry-leading professionals
               <li class="list-inline-item">
                 <a href="#property">Property</a>
               </li>
-              <!-- <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li> -->
               <li class="list-inline-item">
                 <a href="#footer">Contact</a>
               </li>
             </ul>
           </nav>
-          <div class="socials-a">
+          <div class="socials-a text-center">
             <ul class="list-inline">
               <li class="list-inline-item">
                 <a target="_blank" href="https://facebook.com/kingsbury">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
-              <!-- <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-              </li> -->
               <li class="list-inline-item">
                 <a target="_blank" href="https://www.instagram.com/kingsburyglobal">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
@@ -1020,35 +894,26 @@ We actively cultivate strategic partnerships with industry-leading professionals
                   <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
               </li>
-              <!-- <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-dribbble" aria-hidden="true"></i>
-                </a>
-              </li> -->
             </ul>
           </div>
-          <div class="copyright-footer">
+          <div class="text-center text-md-left">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">Kingbury Global Limited</span> All Rights Reserved.
+              <span class="color-a">Kingsbury Global Limited</span> All Rights Reserved.
             </p>
-          </div>
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-            -->
-            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+
   <!--/ Footer End /-->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <a href="https://wa.me/2347048000779" target="_blank" class="whatsapp-icon">
+    <i class="fa-brands fa-whatsapp fa-3x"></i>
+  </a>
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
@@ -1066,4 +931,5 @@ We actively cultivate strategic partnerships with industry-leading professionals
   <script src="js/main.js"></script>
 
 </body>
+
 </html>
