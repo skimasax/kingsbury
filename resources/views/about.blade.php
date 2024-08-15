@@ -139,7 +139,8 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="https://kingsburyglobal.com">Kingsbury<span class="color-b">Global</span></a>
+      <!-- <a class="navbar-brand text-brand" href="https://kingsburyglobal.com">Kingsbury<span class="color-b">Global</span></a> -->
+      <a class="navbar-brand text-brand" href="{{ url('/')}}"><img width="150" src="{{ asset('images/kingsbury_logo.png') }}" alt="logo"></a>
       <!-- <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
@@ -201,7 +202,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="about-img-box">
-            <img src="img/slide-about-1.jpg" alt="" class="img-fluid">
+            <img src="images/partner.jpg" alt="" class="img-fluid">
           </div>
           <div class="sinse-box">
             <h3 class="sinse-title">Partners Information

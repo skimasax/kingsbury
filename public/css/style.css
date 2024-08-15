@@ -48,6 +48,7 @@ a:hover {
   transition: all .5s ease;
 }
 
+
 .link-one:hover {
   color: #000000;
   text-decoration: none;
@@ -359,11 +360,11 @@ a:hover {
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #F4C203;
+  background-color: white;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
-  background-color: #F4C203;
+  background-color: white;
   width: 35px;
 }
 
@@ -877,11 +878,11 @@ a:hover {
 }
 
 .intro .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #F4C203;
+  background-color: white;
 }
 
 .intro .owl-theme .owl-dots .owl-dot.active span {
-  background-color: #F4C203;
+  background-color: white;
 }
 
 .intro .intro-item {
@@ -1275,7 +1276,7 @@ a:hover {
 
 .box-comments .list-comments span {
   display: block;
-  color: #2B2A2A;
+  color: white;
   font-style: italic;
 }
 
@@ -1310,7 +1311,7 @@ a:hover {
 
 .card-box-ico span {
   font-size: 4rem;
-  color: #000000;
+  color: white;
 }
 
 .title-c {
@@ -1433,7 +1434,7 @@ a:hover {
   content: ' ';
   width: 35px;
   height: 2px;
-  background-color: #000000;
+  background-color: white;
   position: absolute;
   bottom: -15px;
 }
@@ -1466,7 +1467,7 @@ a:hover {
 
 .testimonial-ico span {
   font-size: 1.8rem;
-  background-color: #F4C203;
+  background-color: white;
   color: #ffffff;
   padding: .4rem 1rem;
   border-radius: 50px;

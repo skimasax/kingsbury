@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Kingsbury Global Investment Limited</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
+  <meta name="keywords" content="Nigerian real estate, Property for sale in Nigeria,Houses for rent in Lagos,Real estate agents in Nigeria,Property development in Nigeria,Affordable housing in Nigeria,Luxury apartments in Lagos,Commercial property for lease in Nigeria,Nigerian property market,Real estate investment in Nigeria,Property management in Nigeria,Estate agents in Lagos,Property valuation in Nigeria,2 bedroom apartments for sale in Ikeja Lagos,Commercial property for rent in Victoria Island Lagos,Affordable housing schemes in Nigeria,Luxury villas for sale in Abuja,Short let apartments in Lagos">
   <meta content="" name="description">
 
   <!-- Favicons -->
@@ -164,7 +164,6 @@
       #ourServicesImage {
         display: none;
       }
-
     }
 
     .card {
@@ -188,6 +187,15 @@
       color: #666;
     }
 
+    #bimbo {
+      color: white;
+      display: inline-block;
+      /* Ensure it's displayed inline */
+      visibility: visible;
+      /* Ensure visibility is set to visible */
+      opacity: 1;
+    }
+
     @media (max-width: 768px) {
       .card {
         margin-bottom: 30px;
@@ -197,7 +205,7 @@
     .intro-banner {
       height: 300px;
       background-size: cover;
-      background-position: center;
+      background-position: top;
       position: relative;
     }
 
@@ -223,9 +231,10 @@
     }
 
     @media (max-width: 768px) {
-      .bg-image{
-        height:100px
+      .bg-image {
+        height: 100px;
       }
+
       .intro-banner {
         height: 200px;
       }
@@ -233,11 +242,20 @@
       .about-content {
         font-size: 16px;
       }
+
+      #bimbo {
+        color: white;
+        display: inline-block;
+        /* Ensure it's displayed inline */
+        visibility: visible;
+        /* Ensure visibility is set to visible */
+        opacity: 1;
+      }
     }
 
     .section-footer {
       padding: 60px 0;
-      background-color: #f8f9fa;
+      background-color: white;
     }
 
     .widget-a {
@@ -264,11 +282,11 @@
     .w-footer-a li {
       margin-bottom: 10px;
       font-size: 16px;
-      color: #666;
+      color: white;
     }
 
     .color-text-a {
-      color: #f4c203;
+      color: white;
     }
 
     @media (max-width: 768px) {
@@ -280,55 +298,56 @@
         font-size: 14px;
       }
     }
+
     .section-footer {
-  background-color: #202f4b;
-  color: #fff;
-  padding: 40px 0;
-}
+      background-color: #202f4b;
+      color: white;
+      padding: 40px 0;
+    }
 
-.nav-footer {
-  margin-bottom: 20px;
-}
+    .nav-footer {
+      margin-bottom: 20px;
+    }
 
-.nav-footer ul {
-  padding-left: 0;
-  list-style: none;
-}
+    .nav-footer ul {
+      padding-left: 0;
+      list-style: none;
+    }
 
-.nav-footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    .nav-footer a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-.nav-footer a:hover {
-  color: #f4c203;
-}
+    .nav-footer a:hover {
+      color: #f4c203;
+    }
 
-.socials-a ul {
-  padding-left: 0;
-  list-style: none;
-}
+    .socials-a ul {
+      padding-left: 0;
+      list-style: none;
+    }
 
-.socials-a i {
-  font-size: 24px;
-  margin: 0 10px;
-}
+    .socials-a i {
+      font-size: 24px;
+      margin: 0 10px;
+    }
 
-.socials-a i:hover {
-  color: #f4c203;
-}
+    .socials-a i:hover {
+      color: white;
+    }
 
-.copyright {
-  margin-top: 20px;
-  font-size: 14px;
-}
+    .copyright {
+      margin-top: 20px;
+      font-size: 14px;
+    }
 
-.color-a {
-  color: #f4c203;
-}
-
+    .color-a {
+      color: #f4c203;
+    }
   </style>
+
 
 </head>
 
@@ -346,7 +365,8 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="">Kingsbury<span class="color-b" style="color: #202F4B;">Global</span></a>
+      <!-- <a class="navbar-brand text-brand" href="">Kingsbury<span class="color-b" style="color: #202F4B;">Global</span></a> -->
+      <a class="navbar-brand text-brand" href=""><img width="150" src="{{ asset('images/kingsbury_logo.png') }}" alt="logo"></a>
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -355,6 +375,16 @@
           <li class="nav-item">
             <a class="nav-link" href="#about">About us</a>
           </li>
+          <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Listing
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="listingDropdown">
+        <li><a class="dropdown-item" href="{{ url('property/house') }}">House</a></li>
+        <li><a class="dropdown-item" href="{{ url('property/land') }}">Land</a></li>
+    </ul>
+</li>
+
           <li class="nav-item">
             <a class="nav-link" href="#footer">Contact us</a>
           </li>
@@ -371,7 +401,7 @@
   <!--/ Carousel Star /-->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/house1.jpeg)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/4point/Olowora_Cam_View1-standard-height-2500px.jpeg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -396,7 +426,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-2.jpg)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/amari/ABIJO_EXTERIOR_3A.jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -421,7 +451,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-3.jpg)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(images/Olivia/OLIVIA_COURTS_Scene_1A.jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -546,9 +576,9 @@
               <h2 class="title-a">Latest Properties</h2>
             </div>
             <div class="title-link">
-              <!-- <a href="property-grid.html">All Property
+              <a href="{{url('property')}}">See More Properties
                 <span class="ion-ios-arrow-forward"></span>
-              </a> -->
+              </a>
             </div>
           </div>
         </div>
@@ -557,19 +587,19 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+            <img src="https://res.cloudinary.com/daqnlwgkp/image/upload/v1723710796/kingsbury/amari/ABIJO_02_fyxcog.jpg" alt="" class="img-a img-fluid" style="height: 465px;">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">Lekki-Ajah Land
+                    <a href="property-single.html">Amari Apartments
                       <!-- <br /> Olive Road Two</a> -->
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Coming Soon!!</span>
+                    <span class="price-a">Check it out</span>
                   </div>
                   <a href="#" class="link-a">
                     <span class=""></span>
@@ -578,9 +608,11 @@
                 <div class="card-footer-a">
                   <ul class="card-info d-flex justify-content-around">
                     <li>
-                      <h4 class="card-info-title">Lekki-Ajah Mega Court</h4>
-                      <span>
-                        Our Fast-selling Lekki-Ajah Land <br> with Agreement and C of O.
+                      <h4 class="card-info-title">Abijo Gra, Lekki Peninsula, Lagos.
+                      </h4>
+                      <span class="card-info-title">
+                      Price from ₦65,000,000
+                      
                       </span>
                     </li>
                   </ul>
@@ -592,19 +624,19 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-3.jpg" alt="" class="img-a img-fluid">
+              <img src="https://res.cloudinary.com/daqnlwgkp/image/upload/v1723710709/kingsbury/paul/PC_View_2_k2it5a.jpg" alt="" class="img-a img-fluid" style="height: 465px;">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">Abuja Land
+                    <a href="{{url('property')}}">Paul’s Creek 
                       <!-- <br /> Olive Road Two</a> -->
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Coming Soon!!</span>
+                    <span class="price-a">Check it out</span>
                   </div>
                   <a href="#" class="link-a">
                     <span class=""></span>
@@ -613,9 +645,10 @@
                 <div class="card-footer-a">
                   <ul class="card-info d-flex justify-content-around">
                     <li>
-                      <h4 class="card-info-title">Abuja Mega Court</h4>
-                      <span>
-                        Our Fast-selling Abuja Land <br> with Agreement and C of O.
+                      <h4 class="card-info-title">4 bedroom Terraces
+</h4>
+                      <span class="card-info-title">
+                      Price from #135,000,000
                       </span>
                     </li>
                   </ul>
@@ -633,13 +666,13 @@
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">Epe Land
+                    <a href="property-single.html">Olivia Court
                       <!-- <br /> Olive Road Two</a> -->
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Coming Soon!!</span>
+                    <span class="price-a">CHECK IT OUT</span>
                   </div>
                   <a href="#" class="link-a">
                     <span class=""></span>
@@ -648,9 +681,9 @@
                 <div class="card-footer-a">
                   <ul class="card-info d-flex justify-content-around">
                     <li>
-                      <h4 class="card-info-title">Epe Mega Court</h4>
-                      <span>
-                        Our Fast-selling Epe Land <br> with Agreement and C of O.
+                      <h4 class="card-info-title">(2 bedroom apartment)</h4>
+                      <span class="card-info-title">
+                        Price from #100,000,000
                       </span>
                     </li>
                   </ul>
@@ -716,27 +749,16 @@
           </div>
         </div>
       </div>
-
       <div class="row">
-        <div class="container-fluid img-fluid" style="background-image: url(images/kingsbury2.jpeg);" id="ourServicesImage">
-          <div class="overlay overlay-a"></div>
-          <div class="intro-content display-table" style="height:600px;">
-            <div class="table-cell">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-2"></div>
-                  <div class="col-lg-8">
-                    <div class="justify-content-center intro-body">
-                      <nav aria-label="breadcrumb">
-                        <!-- <ol class="breadcrumb justify-content-center text-uppercase">
-                    <li class="breadcrumb-item"><a href="#">About Us</a></li>
-                  </ol> -->
-                      </nav>
-                    </div>
-                  </div>
-                  <div class="col-lg-2"></div>
-                </div>
-              </div>
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box" style="width: 100%;">
+              <img class="img-fluid" src="{{ asset('images/services.jpg') }}" alt="" style="width: 100%; height:400px">
+            </div>
+            <div class="title-link">
+              <!-- <a href="property-grid.html">All Property
+                <span class="ion-ios-arrow-forward"></span>
+              </a> -->
             </div>
           </div>
         </div>
@@ -792,7 +814,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 intro-banner" style="background-image: url(img/slide-about-1.jpg);">
+        <div class="col-12 intro-banner" style="background-image: url(images/kingsbury_contractor.jpg);">
           <div class="overlay overlay-a"></div>
           <div class="intro-content text-center">
             <div class="container">
@@ -831,23 +853,23 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="widget-a">
             <div class="w-header-a">
-              <h3 class="w-title-a text-brand">Kingsbury Global Investment Limited</h3>
+              <h3 class="w-title-a text-brand text-white">Kingsbury Global Investment Limited</h3>
             </div>
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
-                <i class="text-brand text-white">Where desires meet reality... Contact us</i>
+                <i class="text-brand text-white">Where desire meets reality... Contact us</i>
               </p>
             </div>
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a">Address:</span> <span class="text-white">No5, Opeloyeru street Ketu Lagos.</span>
+                  <p class="color-text-a">Address:No5, Opeloyeru street Ketu Lagos.</p>
                 </li>
                 <li class="color-a">
-                  <span class="color-text-a">Email:</span> <span class="text-white">info@kingsburyglobal.com</span>
+                  <p class="color-text-a">Email:info@kingsburyglobal.com</p>
                 </li>
                 <li class="color-a">
-                  <span class="color-text-a">Phone:</span> <span class="text-white">07048000779</span>
+                  <p class="text-white" style="visibility: visible !important;">Phone:+(234)-7048000779</p>
                 </li>
               </ul>
             </div>
@@ -881,17 +903,22 @@
             <ul class="list-inline">
               <li class="list-inline-item">
                 <a target="_blank" href="https://facebook.com/kingsbury">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i class="fa fa-facebook" aria-hidden="true" style="color:white"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a target="_blank" href="https://www.instagram.com/kingsburyglobal">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <i class="fa fa-instagram" aria-hidden="true" style="color:white"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a target="_blank" href="https://www.linkedin.com/in/kingsbury-global-investment-limited-064b302b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  <i class="fa fa-linkedin" aria-hidden="true" style="color:white"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://youtube.com/@kingsburyglobal?si=9skbUgBBrSvQDc0D">
+                  <i class="fa fa-youtube" aria-hidden="true" style="color:white"></i>
                 </a>
               </li>
             </ul>
@@ -911,7 +938,7 @@
   <!--/ Footer End /-->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <a href="https://wa.me/2347048000779" target="_blank" class="whatsapp-icon">
+  <a href="https://wa.me/2347048000779" target="_blank" class="whatsapp-icon" style="color: green;">
     <i class="fa-brands fa-whatsapp fa-3x"></i>
   </a>
   <div id="preloader"></div>
