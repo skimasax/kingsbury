@@ -57,10 +57,10 @@ class PropertyController extends Controller
         $contact = $attributes['contact'];
         $message = $attributes['message'];
 
-        Notification::route('mail', $adminEmail)
-        ->notify(new PropertyEnquiryNotification($name,$contact,$message,$property));
+        // Notification::route('mail', $adminEmail)
+        // ->notify(new PropertyEnquiryNotification($name,$contact,$message,$property));
 
-        return view('singleproperty')->with("msg", "<div class='alert alert-success'>Enquiry submitted successfully..we will get back to you in 24-48hrs</div>");
+        return back()->with("msg", "<div class='alert alert-success'>Enquiry submitted successfully..we will get back to you in 24-48hrs</div>");
 
         //get the name of the property
 
