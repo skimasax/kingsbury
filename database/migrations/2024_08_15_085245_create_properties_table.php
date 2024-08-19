@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('governors_consent');
             $table->string('title');
+            $table->string('type');
             $table->string('feature_1');
             $table->string('feature_2');
             $table->string('feature_3');
@@ -27,6 +28,15 @@ return new class extends Migration
             $table->string('feature_5');
             $table->string('feature_6')->nullable();
             $table->string('feature_7')->nullable();
+            $table->string('feature_8')->nullable();
+            $table->string('feature_9')->nullable();
+            $table->string('landmark_1')->nullable();
+            $table->string('landmark_2')->nullable();
+            $table->string('landmark_3')->nullable();
+            $table->string('landmark_4')->nullable();
+            $table->string('landmark_5')->nullable();
+            $table->string('landmark_6')->nullable();
+            $table->string('payment_plan')->nullable();
             $table->string('images_1')->nullable();
             $table->string('images_2')->nullable();
             $table->string('images_3')->nullable();

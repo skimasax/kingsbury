@@ -451,12 +451,12 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="{{url('home')}}">Home</a>
+          <a class="nav-link " href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About us</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
     <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Listing
     </a>
@@ -491,10 +491,10 @@
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Home</a>
+                <a href="{{route('home')}}">Home</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Properties Grid
+                Properties
               </li>
             </ol>
           </nav>
@@ -508,18 +508,6 @@
   <section class="property-grid grid">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <div class="grid-option">
-            <form>
-              <select class="custom-select">
-                <option selected>All</option>
-                <option value="1">New to Old</option>
-                <option value="2">For Rent</option>
-                <option value="3">For Sale</option>
-              </select>
-            </form>
-          </div>
-        </div>
        @if (count($data) > 0)
         @foreach ($data as $property)
           

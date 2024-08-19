@@ -370,20 +370,20 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="">Home</a>
+            <a class="nav-link active" href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About us</a>
           </li>
           <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Listing
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="listingDropdown">
-        <li><a class="dropdown-item" href="{{ url('property/house') }}">House</a></li>
-        <li><a class="dropdown-item" href="{{ url('property/land') }}">Land</a></li>
-    </ul>
-</li>
+            <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Listing
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="listingDropdown">
+              <li><a class="dropdown-item" href="{{ url('property') }}">House</a></li>
+              <li><a class="dropdown-item" href="{{ url('land') }}">Land</a></li>
+            </ul>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#footer">Contact us</a>
@@ -584,35 +584,36 @@
         </div>
       </div>
       <div id="property-carousel" class="owl-carousel owl-theme">
+        @if (count($data) > 0)
+          @foreach ($data as $property )
+            
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-            <img src="https://res.cloudinary.com/daqnlwgkp/image/upload/v1723710796/kingsbury/amari/ABIJO_02_fyxcog.jpg" alt="" class="img-a img-fluid" style="height: 465px;">
+              <img src="{{$property->images_1}}" alt="" class="img-a img-fluid" style="height: 465px;">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.html">Amari Apartments
-                      <!-- <br /> Olive Road Two</a> -->
+                    <a href="{{ route('property.single', ['id' => $property->id]) }}">{{ $property->property_name}}
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
                     <span class="price-a">Check it out</span>
                   </div>
-                  <a href="#" class="link-a">
+                  <a href="{{ route('property.single', ['id' => $property->id]) }}" class="link-a">
                     <span class=""></span>
                   </a>
                 </div>
                 <div class="card-footer-a">
                   <ul class="card-info d-flex justify-content-around">
                     <li>
-                      <h4 class="card-info-title">Abijo Gra, Lekki Peninsula, Lagos.
+                      <h4 class="card-info-title">{{ $property->location }}
                       </h4>
                       <span class="card-info-title">
-                      Price from ₦65,000,000
-                      
+                        Price from {{ $property->price }}
                       </span>
                     </li>
                   </ul>
@@ -621,112 +622,9 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item-b">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="https://res.cloudinary.com/daqnlwgkp/image/upload/v1723710709/kingsbury/paul/PC_View_2_k2it5a.jpg" alt="" class="img-a img-fluid" style="height: 465px;">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="{{url('property')}}">Paul’s Creek 
-                      <!-- <br /> Olive Road Two</a> -->
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">Check it out</span>
-                  </div>
-                  <a href="#" class="link-a">
-                    <span class=""></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">4 bedroom Terraces
-</h4>
-                      <span class="card-info-title">
-                      Price from #135,000,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-b">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property-7.jpg" alt="" class="img-a img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="property-single.html">Olivia Court
-                      <!-- <br /> Olive Road Two</a> -->
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">CHECK IT OUT</span>
-                  </div>
-                  <a href="#" class="link-a">
-                    <span class=""></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">(2 bedroom apartment)</h4>
-                      <span class="card-info-title">
-                        Price from #100,000,000
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-b">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="property-single.html">Ibadan Land
-                      <!-- <br /> Olive Road Two</a> -->
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">Coming Soon!!</span>
-                  </div>
-                  <a href="#" class="link-a">
-                    <span class=""></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Ibadan Mega Court</h4>
-                      <span>
-                        Our Fast-selling Ibadan Land <br> with Agreement and C of O.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        @endforeach
+        @endif
       </div>
     </div>
   </section>

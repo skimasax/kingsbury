@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <title>EstateAgency Bootstrap Template</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('img/favicon.png')}}" rel="icon">
+  <link href="{{asset(' img/apple-touch-icon.png ')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{asset(' lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/animate/animate.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+ 
 
   <!-- =======================================================
     Theme Name: EstateAgency
@@ -133,52 +136,39 @@
   <!--/ Nav Star /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">Estate<span class="color-b">Agency</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+      <!-- <a class="navbar-brand text-brand" href="">Kingsbury<span class="color-b" style="color: #202F4B;">Global</span></a> -->
+      <a class="navbar-brand text-brand" href=""><img width="150" src="{{ asset('images/kingsbury_logo.png') }}" alt="logo"></a>
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="property-grid.html">Property</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog-grid.html">Blog</a>
+            <a class="nav-link" href="#about">About us</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Pages
+            <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Listing
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item active" href="property-single.html">Property Single</a>
-              <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-              <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
-              <a class="dropdown-item" href="agent-single.html">Agent Single</a>
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="listingDropdown">
+              <li><a class="dropdown-item" href="{{ url('property') }}">House</a></li>
+              <li><a class="dropdown-item" href="{{ url('property/land') }}">Land</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="{{url('agent')}}">Become a partner</a>
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
     </div>
   </nav>
   <!--/ Nav End /-->
@@ -189,8 +179,8 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">304 Blaster Up</h1>
-            <span class="color-text-a">Chicago, IL 606543</span>
+            <h1 class="title-single">{{$data->property_name}}</h1>
+            <span class="color-text-a">{{$data->location}}</span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -203,7 +193,7 @@
                 <a href="property-grid.html">Properties</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                304 Blaster Up
+              {{$data->property_name}}
               </li>
             </ol>
           </nav>
@@ -220,13 +210,19 @@
         <div class="col-sm-12">
           <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
             <div class="carousel-item-b">
-              <img src="img/slide-2.jpg" alt="">
+              <img src="{{$data->images_1}}" alt="image_1">
             </div>
             <div class="carousel-item-b">
-              <img src="img/slide-3.jpg" alt="">
+              <img src="{{$data->images_2}}" alt="image_2">
             </div>
             <div class="carousel-item-b">
-              <img src="img/slide-1.jpg" alt="">
+              <img src="{{$data->images_3}}" alt="image_3">
+            </div>
+            <div class="carousel-item-b">
+              <img src="{{$data->images_4}}" alt="image_4">
+            </div>
+            <div class="carousel-item-b">
+              <img src="{{$data->images_5}}" alt="image_5">
             </div>
           </div>
           <div class="row justify-content-between">
@@ -237,8 +233,11 @@
                     <span class="ion-money">$</span>
                   </div>
                   <div class="card-title-c align-self-center">
-                    <h5 class="title-c">15000</h5>
+                    <h5>Price:</h5>
+                    <h5 class="title-c">{{$data->price}}</h5>
+                    <h6 style="font-size:10px; color:red"><b>{{$data->payment_plan}}</b></h6>
                   </div>
+                  
                 </div>
               </div>
               <div class="property-summary">
@@ -252,20 +251,24 @@
                 <div class="summary-list">
                   <ul class="list">
                     <li class="d-flex justify-content-between">
-                      <strong>Property ID:</strong>
-                      <span>1134</span>
+                      <strong>Governors Consent:</strong>
+                      <span>{{ $data->governors_consent }}</span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <strong>Title:</strong>
+                      <span>{{ $data->title }}</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Location:</strong>
-                      <span>Chicago, IL 606543</span>
+                      <span>{{ $data->location }}</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Property Type:</strong>
-                      <span>House</span>
+                      <span>{{$data->type}}</span>
                     </li>
-                    <li class="d-flex justify-content-between">
-                      <strong>Status:</strong>
-                      <span>Sale</span>
+                    <!-- <li class="d-flex justify-content-between">
+                      <strong>Payment Plan:</strong>
+                      <span></span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Area:</strong>
@@ -284,7 +287,7 @@
                     <li class="d-flex justify-content-between">
                       <strong>Garage:</strong>
                       <span>1</span>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </div>
@@ -299,17 +302,13 @@
               </div>
               <div class="property-description">
                 <p class="description color-text-a">
-                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                  neque, auctor sit amet
-                  aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.
-                  Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt
-                  nibh pulvinar quam id dui posuere blandit.
+                  {{$data->description}}
                 </p>
-                <p class="description color-text-a no-margin">
+                <!-- <p class="description color-text-a no-margin">
                   Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget
                   malesuada. Quisque velit nisi,
                   pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
-                </p>
+                </p> -->
               </div>
               <div class="row section-t3">
                 <div class="col-sm-12">
@@ -320,15 +319,32 @@
               </div>
               <div class="amenities-list color-text-a">
                 <ul class="list-a no-margin">
-                  <li>Balcony</li>
-                  <li>Outdoor Kitchen</li>
-                  <li>Cable Tv</li>
-                  <li>Deck</li>
-                  <li>Tennis Courts</li>
-                  <li>Internet</li>
-                  <li>Parking</li>
-                  <li>Sun Room</li>
-                  <li>Concrete Flooring</li>
+                  <li>{{ $data->feature_1 }}</li>
+                  <li>{{ $data->feature_2 }}</li>
+                  <li>{{ $data->feature_3 }}</li>
+                  <li>{{ $data->feature_4 }}</li>
+                  <li>{{ $data->feature_5 }}</li>
+                  <li>{{ $data->feature_6 }}</li>
+                  <li>{{ $data->feature_7 }}</li>
+                 
+                </ul>
+              </div>
+              <div class="row section-t3">
+                <div class="col-sm-12">
+                  <div class="title-box-d">
+                    <h3 class="title-d">Landmarks</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="amenities-list color-text-a">
+                <ul class="list-a no-margin">
+                  <li>{{ $data->landmark_1 }}</li>
+                  <li>{{ $data->landmark_2 }}</li>
+                  <li>{{ $data->landmark_3 }}</li>
+                  <li>{{ $data->landmark_4 }}</li>
+                  <li>{{ $data->landmark_5 }}</li>
+                  <li>{{ $data->landmark_6 }}</li>
+                 
                 </ul>
               </div>
             </div>
@@ -336,38 +352,38 @@
         </div>
         <div class="col-md-10 offset-md-1">
           <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
                 aria-controls="pills-video" aria-selected="true">Video</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="pills-plans-tab" data-toggle="pill" href="#pills-plans" role="tab" aria-controls="pills-plans"
                 aria-selected="false">Floor Plans</a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map"
-                aria-selected="false">Ubication</a>
-            </li>
+                aria-selected="false">Location:</a>
+            </li> -->
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+            <!-- <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
               <iframe src="https://player.vimeo.com/video/73221098" width="100%" height="460" frameborder="0"
                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
             <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
               <img src="img/plan2.jpg" alt="" class="img-fluid">
-            </div>
-            <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
+            </div> -->
+            <!-- <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834"
                 width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-md-12">
           <div class="row section-t3">
             <div class="col-sm-12">
               <div class="title-box-d">
-                <h3 class="title-d">Contact Agent</h3>
+                <h3 class="title-d">Contact Us:</h3>
               </div>
             </div>
           </div>
@@ -377,7 +393,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="property-agent">
-                <h4 class="title-agent">Anabella Geller</h4>
+                <h4 class="title-agent">Kingsbury Global Investment Limited</h4>
                 <p class="color-text-a">
                   Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
                   dui. Quisque velit nisi,
@@ -386,66 +402,37 @@
                 <ul class="list-unstyled">
                   <li class="d-flex justify-content-between">
                     <strong>Phone:</strong>
-                    <span class="color-text-a">(222) 4568932</span>
+                    <span class="color-text-a">+(234)-7048000779</span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Mobile:</strong>
-                    <span class="color-text-a">777 287 378 737</span>
+                    <span class="color-text-a">+(234)-7048000779</span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Email:</strong>
-                    <span class="color-text-a">annabella@example.com</span>
+                    <span class="color-text-a">info@kingsburyglobal.com</span>
                   </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Skype:</strong>
-                    <span class="color-text-a">Annabela.ge</span>
-                  </li>
+                  
                 </ul>
-                <div class="socials-a">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+             
               </div>
             </div>
             <div class="col-md-12 col-lg-4">
+              {!! session('msg') !!}
               <div class="property-contact">
-                <form class="form-a">
+                <form class="form-a" action="{{route('property-enquiry')}}" method="post">
+                  @csrf
                   <div class="row">
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <input type="text" class="form-control form-control-lg form-control-a" id="inputName"
+                        <input type="text" name="customer_name" class="form-control form-control-lg form-control-a" id="inputName"
                           placeholder="Name *" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
-                          placeholder="Email *" required>
+                        <input type="text" name="contact" class="form-control form-control-lg form-control-a" id="inputEmail1"
+                          placeholder="Email/Phone *" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-1">
@@ -453,6 +440,9 @@
                         <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="45"
                           rows="8" required></textarea>
                       </div>
+                    </div>
+                    <div>
+                      <input type="hidden" name="property_id" value="{{$data->id}}">
                     </div>
                     <div class="col-md-12">
                       <button type="submit" class="btn btn-a">Send Message</button>
@@ -469,85 +459,29 @@
   <!--/ Property Single End /-->
 
   <!--/ footer Star /-->
-  <section class="section-footer">
+  <section class="section-footer" id="footer" style="background-color: #202f4b !important;">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="widget-a">
             <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
+              <h3 class="w-title-a text-brand text-white">Kingsbury Global Investment Limited</h3>
             </div>
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
-                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                sed aute irure.
+                <i class="text-brand text-white">Where desire meets reality... Contact us</i>
               </p>
             </div>
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com</li>
+                  <p class="text-white" style="visibility: visible !important;">Address:No5, Opeloyeru street Ketu Lagos.</p>
+                </li>
                 <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
+                  <p class="text-white" style="visibility: visible !important;">Email:info@kingsburyglobal.com</p>
                 </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
+                <li class="color-a">
+                  <p class="text-white" style="visibility: visible !important;">Phone:+(234)-7048000779</p>
                 </li>
               </ul>
             </div>
@@ -556,72 +490,56 @@
       </div>
     </div>
   </section>
-  <footer>
+
+  <footer class="section-footer" style="background-color: #202f4b !important;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <nav class="nav-footer">
-            <ul class="list-inline">
+            <ul class="list-inline text-center text-md-left">
               <li class="list-inline-item">
                 <a href="#">Home</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="#about">About</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="#property">Property</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="#footer">Contact</a>
               </li>
             </ul>
           </nav>
-          <div class="socials-a">
+          <div class="socials-a text-center">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                <a target="_blank" href="https://facebook.com/kingsbury">
+                  <i class="fa fa-facebook" aria-hidden="true" style="color:white"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a target="_blank" href="https://www.instagram.com/kingsburyglobal">
+                  <i class="fa fa-instagram" aria-hidden="true" style="color:white"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                <a target="_blank" href="https://www.linkedin.com/in/kingsbury-global-investment-limited-064b302b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                  <i class="fa fa-linkedin" aria-hidden="true" style="color:white"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-dribbble" aria-hidden="true"></i>
+                <a target="_blank" href="https://youtube.com/@kingsburyglobal?si=9skbUgBBrSvQDc0D">
+                  <i class="fa fa-youtube" aria-hidden="true" style="color:white"></i>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="copyright-footer">
+          <div class="text-center text-md-left">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">EstateAgency</span> All Rights Reserved.
+              <span class="color-a">Kingsbury Global Limited</span> All Rights Reserved.
             </p>
-          </div>
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-            -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
       </div>
@@ -633,18 +551,19 @@
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="{{ asset('lib/jquery/jquery.min.js ')}}"></script>
+  <script src="{{ asset('lib/jquery/jquery-migrate.min.js') }}"></script>
+  <script src="{{ asset('lib/popper/popper.min.js') }}"></script>
+  <script src="{{ asset('lib/bootstrap/js/bootstrap.min.js ')}}"></script>
+  <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+  <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('lib/scrollreveal/scrollreveal.min.js ')}}"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{{ asset('contactform/contactform.js')}}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 </html>
