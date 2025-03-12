@@ -40,5 +40,5 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.kingsburyglobal.com
-          username: home@kingsburyglobal.com
+          username: kingsbury@kingsburyglobal.com
           password: KingsBuryGlobal2025!@
