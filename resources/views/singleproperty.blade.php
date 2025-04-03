@@ -151,7 +151,13 @@
           <li class="nav-item">
             <a class="nav-link" href="#about">About us</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('property') }}">House</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('land') }}">Land</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Listing
             </a>
@@ -159,7 +165,7 @@
               <li><a class="dropdown-item" href="{{ url('property') }}">House</a></li>
               <li><a class="dropdown-item" href="{{ url('property/land') }}">Land</a></li>
             </ul>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a class="nav-link" href="#footer">Contact us</a>

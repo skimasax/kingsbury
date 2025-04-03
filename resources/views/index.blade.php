@@ -873,18 +873,6 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
-  <script>
-    // Ensure dropdown menu toggles correctly on mobile (Bootstrap 5 default should work but this is a fallback)
-    document.addEventListener('DOMContentLoaded', function() {
-      const dropdownToggle = document.querySelector('.nav-item.dropdown > .nav-link');
-
-      dropdownToggle.addEventListener('click', function(e) {
-        const dropdownMenu = this.nextElementSibling;
-        dropdownMenu.classList.toggle('show'); // Toggle 'show' to open/close the dropdown
-        e.preventDefault(); // Prevent default behavior to avoid page reload
-      });
-    });
-  </script>
 
 
 </body>
