@@ -456,15 +456,21 @@
           <li class="nav-item">
             <a class="nav-link" href="#about">About us</a>
           </li>
-          <li class="nav-item dropdown active">
+          <li class="nav-item">
+          <a class="nav-link" href="{{ url('property') }}">House</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{{ url('land') }}">Land</a>
+          </li>
+          <!-- <li class="nav-item dropdown active">
     <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Listing
     </a>
     <ul class="dropdown-menu" aria-labelledby="listingDropdown">
-        <li><a class="dropdown-item" href="{{ url('property/house') }}">House</a></li>
-        <li><a class="dropdown-item" href="{{ url('property/land') }}">Land</a></li>
+        <li><a class="dropdown-item" href="{{ url('property') }}">House</a></li>
+        <li><a class="dropdown-item" href="{{ url('land') }}">Land</a></li>
     </ul>
-</li>
+</li> -->
           <li class="nav-item">
             <a class="nav-link" href="#footer">Contact us</a>
           </li>

@@ -375,7 +375,13 @@
           <li class="nav-item">
             <a class="nav-link" href="#about">About us</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+          <a class="nav-link" href="{{ url('property') }}">House</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{{ url('land') }}">Land</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Listing
             </a>
@@ -383,7 +389,7 @@
               <li><a class="dropdown-item" href="{{ url('property') }}">House</a></li>
               <li><a class="dropdown-item" href="{{ url('land') }}">Land</a></li>
             </ul>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a class="nav-link" href="#footer">Contact us</a>
@@ -854,6 +860,20 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <script>
+  // Ensure dropdown menu toggles correctly on mobile (Bootstrap 5 default should work but this is a fallback)
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.querySelector('.nav-item.dropdown > .nav-link');
+    
+    dropdownToggle.addEventListener('click', function(e) {
+      const dropdownMenu = this.nextElementSibling;
+      dropdownMenu.classList.toggle('show'); // Toggle 'show' to open/close the dropdown
+      e.preventDefault();  // Prevent default behavior to avoid page reload
+    });
+  });
+</script>
+
 
 </body>
 
