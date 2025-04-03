@@ -31,12 +31,24 @@
   <!-- Main Stylesheet File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: EstateAgency
-    Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <meta name="google-site-verification" content="cSRu3rBvlDoC0ashVe_f9wpnez0ImpGrqSMANgabpPE" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16672755198"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16672755198');
+</script>
+
+  <!-- Event snippet for Contact conversion page -->
+  <script>
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16672755198/I4tmCOj_obMaEP6bmI4-'
+    });
+  </script>
   <style>
     /* Position the icon at the bottom left */
     .whatsapp-icon {
@@ -376,10 +388,10 @@
             <a class="nav-link" href="#about">About us</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="{{ url('property') }}">House</a>
+            <a class="nav-link" href="{{ url('property') }}">House</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="{{ url('land') }}">Land</a>
+            <a class="nav-link" href="{{ url('land') }}">Land</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="listingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -591,8 +603,8 @@
       </div>
       <div id="property-carousel" class="owl-carousel owl-theme">
         @if (count($data) > 0)
-          @foreach ($data as $property )
-            
+        @foreach ($data as $property )
+
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -862,17 +874,17 @@
   <script src="js/main.js"></script>
 
   <script>
-  // Ensure dropdown menu toggles correctly on mobile (Bootstrap 5 default should work but this is a fallback)
-  document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggle = document.querySelector('.nav-item.dropdown > .nav-link');
-    
-    dropdownToggle.addEventListener('click', function(e) {
-      const dropdownMenu = this.nextElementSibling;
-      dropdownMenu.classList.toggle('show'); // Toggle 'show' to open/close the dropdown
-      e.preventDefault();  // Prevent default behavior to avoid page reload
+    // Ensure dropdown menu toggles correctly on mobile (Bootstrap 5 default should work but this is a fallback)
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdownToggle = document.querySelector('.nav-item.dropdown > .nav-link');
+
+      dropdownToggle.addEventListener('click', function(e) {
+        const dropdownMenu = this.nextElementSibling;
+        dropdownMenu.classList.toggle('show'); // Toggle 'show' to open/close the dropdown
+        e.preventDefault(); // Prevent default behavior to avoid page reload
+      });
     });
-  });
-</script>
+  </script>
 
 
 </body>
