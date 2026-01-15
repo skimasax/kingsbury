@@ -12,7 +12,32 @@ use Illuminate\Support\Facades\Notification;
 
 class PropertyController extends Controller
 {
-    //
+    // Modern Views
+    public function modernHome()
+    {
+        $data = Property::inRandomOrder()->get();
+        return view('modern-index')->with(['data' => $data]);
+    }
+
+    public function modernIndex()
+    {
+        $data = Property::where('type','house')->inRandomOrder()->get();
+        return view('modern-property-grid')->with(['data' => $data]);
+    }
+
+    public function modernLand()
+    {
+        $data = Property::where('type','land')->inRandomOrder()->get();
+        return view('modern-property-grid')->with(['data' => $data]);
+    }
+
+    public function modernShow($id)
+    {
+        $data = Property::find($id);
+        return view('modern-singleproperty')->with(['data' => $data]);
+    }
+
+    // Legacy Views (for backward compatibility)
     public function home()
     {
         $data = Property::inRandomOrder()->get();
