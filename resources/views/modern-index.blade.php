@@ -7,11 +7,11 @@
 <section class="hero" style="background-image: linear-gradient(rgba(32, 47, 75, 0.7), rgba(26, 37, 47, 0.5)), url('{{ asset('images/4point/Olowora_Cam_View1-standard-height-2500px.jpeg') }}');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1 class="hero-title" data-aos="fade-up">
+        <h1 style="margin-top:100px" class="hero-title" data-aos="fade-up">
             Welcome to <span style="color: var(--secondary-600);">Kingsbury Global</span><br>
             Investment Limited
         </h1>
-        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+        <p class="hero-subtitle text-white" data-aos="fade-up" data-aos-delay="200">
             Discover premium real estate solutions with cutting-edge technology. 
             Your trusted partner for luxury properties, investment opportunities, 
             and exceptional real estate services in Nigeria.
@@ -157,12 +157,12 @@
         </div>
         
         <!-- Services Hero Image -->
-        <div class="mb-16" data-aos="fade-up">
+        <!-- <div class="mb-16" data-aos="fade-up">
             <div class="text-center">
                 <img src="{{ asset('images/services.jpg') }}" alt="Our Services" 
                      style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-4xl); box-shadow: var(--shadow-xl);">
             </div>
-        </div>
+        </div> -->
         
         <div class="grid grid-cols-3 gap-8">
             <div class="card card-elevated" data-aos="fade-up" data-aos-delay="100">

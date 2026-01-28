@@ -168,7 +168,7 @@
                     </p>
                     
                     <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                        He is a goal getter and a self motivated individual who is diligent in his work. In addition to his degree, he is a chartered sales professional from the Certified Sales Professional Institute (A.S.P). He is also a certified Health, Safety and Environment officer (HSE) level I of I to III of III. His sales & marketing experience spans over 8 years in the Real Estate industry. He has worked in various capacities within the sales department from being a sales executive to the Head of sales with exponential growth in his career. 
+                        He is a goal getter and a self motivated individual who is diligent in his work. In addition to his degree, he is a chartered sales professional from the Certified Sales Professional Institute (A.S.P). He is also a certified Health, Safety and Environment officer (HSE) level I of I to III of III. His sales & marketing experience spans for a period of 10 years in the Real Estate industry. He has worked in various capacities within the sales department from being a sales executive to the Head of sales with exponential growth in his career. 
 
 Olalekan is presently the Managing Partner at  Kingsbury global investment limited and also consulting as a real estate brokerage, Development and other real estate services.
                     </p>
@@ -215,13 +215,13 @@ Olalekan is presently the Managing Partner at  Kingsbury global investment limit
         <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-right">
                 <div class="position-relative">
-                    <img src="{{asset('/images/team.heic')}}" 
+                    <img src="{{asset('/images/teams.jpeg')}}" 
                          alt="Kingsbury Team" 
                          class="img-fluid rounded-3" 
                          style="box-shadow: var(--shadow-lg); width: 100%; height: 400px; object-fit: cover;">
                     
                     <!-- Team overlay badge -->
-                    <div class="position-absolute top-0 end-0 m-4">
+                    <!-- <div class="position-absolute top-0 end-0 m-4">
                         <div class="bg-white p-3 rounded-2" style="box-shadow: var(--shadow-lg);">
                             <div class="d-flex align-items-center gap-2">
                                 <div style="width: 40px; height: 40px; background: var(--gradient-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
@@ -229,11 +229,11 @@ Olalekan is presently the Managing Partner at  Kingsbury global investment limit
                                 </div>
                                 <div>
                                     <div style="font-weight: 600; color: var(--primary-color); font-size: 0.9rem;">Expert Team</div>
-                                    <div style="color: var(--text-light); font-size: 0.8rem;">20+ Professionals</div>
+                                    <div style="color: var(--text-light); font-size: 0.8rem;">5+ Professionals</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -321,28 +321,28 @@ Olalekan is presently the Managing Partner at  Kingsbury global investment limit
         <div class="row text-center text-white">
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="p-4">
-                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">500+</div>
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">100+</div>
                     <h5 style="color: var(--white); margin-bottom: 0.5rem;">Properties Sold</h5>
                     <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Successfully delivered to satisfied clients</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="p-4">
-                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">1000+</div>
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">75+</div>
                     <h5 style="color: var(--white); margin-bottom: 0.5rem;">Happy Clients</h5>
                     <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Trusted by families and investors</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="p-4">
-                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">50+</div>
-                    <h5 style="color: var(--white); margin-bottom: 0.5rem;">Projects Completed</h5>
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">20+</div>
+                    <h5 style="color: var(--white); margin-bottom: 0.5rem;">Projects Involved In</h5>
                     <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Across Lagos, Abuja, and beyond</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="p-4">
-                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">15+</div>
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;" class="stat-number">10+</div>
                     <h5 style="color: var(--white); margin-bottom: 0.5rem;">Years Experience</h5>
                     <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Excellence in real estate</p>
                 </div>

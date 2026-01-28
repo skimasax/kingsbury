@@ -11,8 +11,20 @@
     <meta name="keywords" content="@yield('keywords', 'Nigerian real estate, Property for sale in Nigeria, Houses for rent in Lagos, Real estate agents in Nigeria, Property development in Nigeria, Affordable housing in Nigeria, Luxury apartments in Lagos, Commercial property for lease in Nigeria, Nigerian property market, Real estate investment in Nigeria, Property management in Nigeria, Estate agents in Lagos, Property valuation in Nigeria')">
     
     <!-- Favicons -->
-    <link href="{{ asset('img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('images/kingsbury_logo.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('images/kingsbury_logo.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('images/kingsbury_logo.png') }}" rel="shortcut icon" type="image/png">
+    
+    <!-- Additional favicon sizes for better compatibility -->
+    <link href="{{ asset('images/kingsbury_logo.png') }}" rel="icon" sizes="16x16" type="image/png">
+    <link href="{{ asset('images/kingsbury_logo.png') }}" rel="icon" sizes="32x32" type="image/png">
+    <link href="{{ asset('images/kingsbury_logo.png') }}" rel="icon" sizes="96x96" type="image/png">
+    <link href="{{ asset('images/kingsbury_logo.png') }}" rel="apple-touch-icon" sizes="180x180">
+    
+    <!-- Web App Manifest -->
+    <meta name="theme-color" content="#202f4b">
+    <meta name="msapplication-TileColor" content="#202f4b">
+    <meta name="msapplication-TileImage" content="{{ asset('images/kingsbury_logo.png') }}">
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

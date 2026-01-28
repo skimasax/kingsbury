@@ -20,6 +20,15 @@ class DatabaseSeeder extends Seeder
         $this->call(NathanBay300Seeder::class);
         $this->call(NathanBay500Seeder::class);
         $this->call(OliviaSeeder::class);
+        $this->call(SerenityGardens250Seeder::class);
+        $this->call(SerenityGardens500Seeder::class);
+        $this->call(AlvionsCourtPentSeeder::class);
+        $this->call(AlvionsCourtSeeder::class);
+        $this->call(AlvionsCourtTerraceSeeder::class);
+        $this->call(ElsianRise3BedSeeder::class);
+        $this->call(ElsianRiseSeeder::class);
+
+
         
     }
 }
